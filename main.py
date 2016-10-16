@@ -10,31 +10,17 @@ from ui_dialog import Ui_MainWindow
 
 class UserInput:
     def __init__(self, to, tno, n, c, c2, c3, s, si):
-        self.to = to
-        self.tno = tno
-        self.n = n
-        self.c = c
-        self.c2 = c2
-        self.c3 = c3
-        self.s = s
-        self.si = si
-
-    def is_valid(self):
-        try:
-            self.to = float(self.to)
-            self.tno = float(self.tno)
-            self.n = int(self.n)
-            self.c = int(self.c)
-            self.c2 = int(self.c2)
-            self.c3 = int(self.c3)
-            self.s = float(self.s)
-            self.si = float(self.si)
-            if any([self.to <= 0, self.tno <= 0, self.n <= 0, self.c <= 0,
-                    self.c2 <= 0, self.c3 <= 0, self.s <= 0, self.si <= 0]):
-                raise ValueError
-        except ValueError:
-            return False
-        return True
+        self.to = float(to)
+        self.tno = float(tno)
+        self.n = int(n)
+        self.c = int(c)
+        self.c2 = int(c2)
+        self.c3 = int(c3)
+        self.s = float(s)
+        self.si = float(si)
+        if any([self.to <= 0, self.tno <= 0, self.n <= 0, self.c <= 0,
+                self.c2 <= 0, self.c3 <= 0, self.s <= 0, self.si <= 0]):
+            raise ValueError
 
 
 class MainWindow(QDialog, Ui_MainWindow):
@@ -44,7 +30,7 @@ class MainWindow(QDialog, Ui_MainWindow):
         self.output = {}
         self.setupUi(self)
         self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.calc_pushButton.clicked.connect(self.start_calculation)
+        self.calc_pushButton.clicked.connect(self.on_start_calculation)
 
     def show_error(self, *args):
         msg = QMessageBox()
@@ -55,17 +41,18 @@ class MainWindow(QDialog, Ui_MainWindow):
         msg.setStandardButtons(QMessageBox.Ok)
         msg.exec_()
 
-    def start_calculation(self):
-        self.input = UserInput(
-            self.to_lineEdit.text(), self.tno_lineEdit.text(),
-            self.n_lineEdit.text(), self.c_lineEdit.text(),
-            self.c2_lineEdit.text(), self.c3_lineEdit.text(),
-            self.s_lineEdit.text(), self.si_lineEdit.text(),
-        )
-        if not self.input.is_valid():
+    def on_start_calculation(self):
+        try:
+            self.input = UserInput(
+                self.to_lineEdit.text(), self.tno_lineEdit.text(),
+                self.n_lineEdit.text(), self.c_lineEdit.text(),
+                self.c2_lineEdit.text(), self.c3_lineEdit.text(),
+                self.s_lineEdit.text(), self.si_lineEdit.text(),
+            )
+        except ValueError:
             self.show_error()
-        else:
-            self.calculate()
+            self.input = None
+        self.calculate()
         self.input = None
 
     def calculate(self):
