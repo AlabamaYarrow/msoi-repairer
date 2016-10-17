@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>610</width>
-    <height>414</height>
+    <height>431</height>
    </rect>
   </property>
   <property name="font">
@@ -26,7 +26,7 @@
      <x>10</x>
      <y>10</y>
      <width>581</width>
-     <height>401</height>
+     <height>421</height>
     </rect>
    </property>
    <property name="font">
@@ -39,7 +39,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <property name="documentMode">
     <bool>false</bool>
@@ -60,7 +60,7 @@
        <x>10</x>
        <y>10</y>
        <width>561</width>
-       <height>311</height>
+       <height>351</height>
       </rect>
      </property>
      <property name="widgetResizable">
@@ -107,7 +107,7 @@
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>290</y>
+       <y>310</y>
        <width>161</width>
        <height>41</height>
       </rect>

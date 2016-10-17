@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dialog.ui'
 #
-# Created: Mon Oct 17 13:55:27 2016
+# Created: Mon Oct 17 19:17:49 2016
 #      by: PyQt5 UI code generator 5.2.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,14 +12,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(610, 414)
+        MainWindow.resize(610, 431)
         font = QtGui.QFont()
         font.setFamily("ori1Uni")
         font.setBold(True)
         font.setWeight(75)
         MainWindow.setFont(font)
         self.tabWidget = QtWidgets.QTabWidget(MainWindow)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 581, 401))
+        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 581, 421))
         font = QtGui.QFont()
         font.setFamily("Liberation Sans")
         font.setPointSize(13)
@@ -34,7 +34,7 @@ class Ui_MainWindow(object):
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
         self.scrollArea = QtWidgets.QScrollArea(self.tab_3)
-        self.scrollArea.setGeometry(QtCore.QRect(10, 10, 561, 311))
+        self.scrollArea.setGeometry(QtCore.QRect(10, 10, 561, 351))
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.calc_pushButton = QtWidgets.QPushButton(self.tab)
-        self.calc_pushButton.setGeometry(QtCore.QRect(200, 290, 161, 41))
+        self.calc_pushButton.setGeometry(QtCore.QRect(200, 310, 161, 41))
         self.calc_pushButton.setObjectName("calc_pushButton")
         self.gridLayoutWidget = QtWidgets.QWidget(self.tab)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(100, 20, 371, 251))
@@ -194,7 +194,7 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.tab_2, "")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
