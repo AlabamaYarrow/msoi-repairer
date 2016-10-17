@@ -39,7 +39,7 @@
     </font>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <property name="documentMode">
     <bool>false</bool>
@@ -429,10 +429,10 @@
     <widget class="QLabel" name="choice_val_label">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>370</x>
        <y>340</y>
-       <width>131</width>
-       <height>16</height>
+       <width>81</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="text">

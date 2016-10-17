@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dialog.ui'
 #
-# Created: Sun Oct 16 12:23:08 2016
+# Created: Mon Oct 17 13:55:27 2016
 #      by: PyQt5 UI code generator 5.2.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -188,13 +188,13 @@ class Ui_MainWindow(object):
         self.choice_label.setGeometry(QtCore.QRect(100, 340, 211, 16))
         self.choice_label.setObjectName("choice_label")
         self.choice_val_label = QtWidgets.QLabel(self.tab_2)
-        self.choice_val_label.setGeometry(QtCore.QRect(320, 340, 131, 16))
+        self.choice_val_label.setGeometry(QtCore.QRect(370, 340, 81, 20))
         self.choice_val_label.setText("")
         self.choice_val_label.setObjectName("choice_val_label")
         self.tabWidget.addTab(self.tab_2, "")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
